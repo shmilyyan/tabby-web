@@ -29,4 +29,6 @@ stages:
         containerRegistry: 'Docker Hub'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
-        tags: 'tabby-web:$(Build.BuildId)'
+        tags: |
+          tabby-web:$(Build.BuildId)
+          tabby-web:latest
