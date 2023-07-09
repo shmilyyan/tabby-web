@@ -10,6 +10,7 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
+  debug: true
 
 stages:
 - stage: Build
@@ -20,6 +21,7 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
+    
     - task: Docker@2
       inputs:
         containerRegistry: 'Docker Hub'
